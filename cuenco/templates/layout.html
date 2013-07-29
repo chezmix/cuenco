@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>cuen.co - shorten your links!</title>
+<link rel="shortcut icon" href="favicon.ico" />
+<link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/static/css/grid.css">
+<link rel="stylesheet" href="/static/css/base.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+<meta name="description" content="Shorten Those URLs!" />
+<meta name="keywords" content="cuenco,cuen.co,url,shortener,website,address,twitter,share" />
+<script type=text/javascript>
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="{{
+  url_for('static', filename='js/jquery-1.5.2.min.js') }}"><\/script>')</script>
+<script type="text/javascript" src="/static/js/url.js"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22788111-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head> 
+<body>
+<div class="container_12 clearfix">
+<header>
+	<div class="grid_6 prefix_3 suffix_3">
+    	<h1>cuen.co</h1>
+        	<h2>shorten your links!</h2>
+    </div>
+</header>
+
+{% block body %}{% endblock %}
+
+</div>
+<footer>
+  <div class="container_12 clearfix">
+    <div class="grid_4 prefix_4 suffix_4">
+      <div class="footer">
+        <a href="{{ url_for('index') }}">cuen.co</a> | <a href="{{ url_for('recent_entries') }}">recent</a> | <a href="{{ url_for('popular_entries') }}">popular</a><br/>
+		<p>&copy; 2013 cuen.co</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

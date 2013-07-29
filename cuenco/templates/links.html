@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+<article>    
+	<div class="grid_10 prefix_1 suffix_1">
+		<div class="recent_entries">
+			<h3>{{ header }}</h3>
+		</div>   
+	</div>
+	<div class="grid_10 prefix_1 suffix_1">
+		<div class="table_body">
+			<table>
+				<thead>  
+					<tr>
+						<th class="number">#</th>
+						<th class="short">Short</th>
+						<th class="long">Long</th>
+						<th class="views">Views</th>
+					</tr>
+				</thead>
+				<tbody>
+                  {% for entry in entries %}
+                    <tr>
+                        <td class="number">{{ loop.index }}</td>
+                        <td class="short"><a href="{{ config["WEBSITE_URL"] }}/{{ entry.url_hash }}">{{ config["WEBSITE_URL"] }}/{{ entry.url_hash }} </a></td>
+                        <td class="long"><a href="{{ config["WEBSITE_URL"] }}/{{ entry.url_hash }}">{{ entry.long_url }}</a></td>
+                        <td class="views">{{ entry.views }}</td>
+                    </tr>
+                  {% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</article>	  
+{% endblock %}

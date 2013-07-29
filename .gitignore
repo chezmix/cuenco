@@ -33,3 +33,10 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+#virtualenv
+Include
+Lib
+Scripts
+
+cuenco/db

@@ -1,0 +1,120 @@
+body {
+	background-color: 2c2c2c;
+	background-image: url("../images/cream_dust.png");
+	background-repeat: repeat;
+}
+h1 {
+    color: #696969;
+    font-family: "Lato", Helvetica, sans-serif;
+	font-weight: 100;
+	font-size:  6.250em;
+	text-align: center;
+	margin-top: 150px;
+	margin-bottom: 5px;
+	text-shadow: 2px 4px 6px #bbc;
+	
+}
+h2 {
+	color: #696969;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-weight: 200;
+	font-size: 1.875em;
+	text-align: center;	
+	margin: 0;
+}
+p {
+    color: #696969;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+	text-align: left;
+	font-size: 0.750em;
+	background-color: none;
+	padding: 40px;
+	
+}
+a {
+	-webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;	
+}
+a:hover {
+	background: none repeat scroll 0 0 #CCC;
+}
+.footer {
+	text-align: center;	
+	margin-top: 80px;
+}
+.footer p {
+	text-align: center;
+	color: #696969;	
+}
+.footer a {
+	display: inline block;
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 0.750em;
+	color: #696969; 
+	text-decoration: none;
+		
+}
+input#url {
+	width: 500px;
+	height: 25px;
+	margin-top: 80px;
+	font-size: 0.750em;	
+	border: 1px solid #333;
+	box-shadow: 1px 2px 3px #CCC;	
+}	
+input {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;	
+}
+input#cuenco_submit {
+	font-size: 1.000em;
+	text-align: center;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fafafa;
+	background-color: #141414;
+	padding-top: 2px;
+	border: none;
+	-webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+
+}
+input#cuenco_submit:hover {
+	background: none repeat scroll 0 0 #F09;
+}
+
+.content {text-align:center;}
+
+/* recent/popular */
+h3 {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	font-size: 1.250em;
+	font-weight: 200;
+	color: #696969;	
+}
+.table_body {
+	font-family: "Helvetica Neue", Helvetica, Arial;
+	color: #696969;	
+}
+.table_body a {
+	text-decoration: none;
+	font-size: 0.875em;
+	color: #696969;		
+}
+table {
+	width: 780px;
+	text-align: left;	
+}
+tbody th{
+	font-weight: normal;	
+}
+th {
+	padding: 5px;	
+}
+td {
+	padding: 5px;	
+}
+
+        

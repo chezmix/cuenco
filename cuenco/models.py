@@ -3,7 +3,7 @@ from cuenco import db
 
 class WebLink(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    long_url = db.Column(db.String(512), unique=True)
+    long_url = db.Column(db.String(512))
     url_hash = db.Column(db.String(10), unique=True)
     md5_hash = db.Column(db.String(32), unique=True)
     views = db.Column(db.Integer, unique=False, default=0)

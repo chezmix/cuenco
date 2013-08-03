@@ -3,6 +3,9 @@ cuenco
 
 An open source URL shortner using Python, Flask, and SQLAlchemy
 
+###Demo
+http://cuen.co
+
 ###Setup
 
 - Configure the variables in cuenco/__init__.py

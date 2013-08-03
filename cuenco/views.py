@@ -46,11 +46,15 @@ def popular_entries():
     
 @app.route('/_urlgen', methods=['POST'])
 def generate_short_url():
-    link = WebLink(request.form['url'])
-    domain = urlparse(request.url).netloc
+    url_protocol = urlparse(request.form['url']).scheme
+    site_domain = urlparse(app.config["WEBSITE_URL"]).netloc
+    if not url_protocol in ["http", "https", "ftp"]:
+        link = WebLink("http://" + request.form['url'])
+    else:
+        link = WebLink(request.form['url'])
     
     #return invalid if the URL is invalid or contains this site's domain name
-    if not link.is_valid() or urlparse(link.long_url).netloc == domain:
+    if not link.is_valid() or urlparse(link.long_url).netloc == site_domain:
         return jsonify(result="Invalid URL")
     
     url_md5 = md5.new(link.long_url).hexdigest()

@@ -56,7 +56,7 @@ def generate_short_url():
     url_md5 = md5.new(link.long_url).hexdigest()
     existing_link = WebLink.query.filter_by(md5_hash = url_md5).first()
     if (existing_link is not None):
-        result = app.config["WEBSITE_URL"] + str(existing_link.url_hash)
+        result = app.config["WEBSITE_URL"] + "/" + str(existing_link.url_hash)
     else:
         id_next = int(db.session.query(func.max(WebLink.id))[0][0] or 0) + 1
         hash_num = (2654435761 * id_next) % 4294967296 #perfect hash function
